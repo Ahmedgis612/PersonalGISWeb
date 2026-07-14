@@ -1,1 +1,270 @@
+```
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects | Ahmed Mohamed</title>
 
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f8fafc;
+            color: #1f2937;
+            line-height: 1.6;
+        }
+
+        nav {
+            background-color: #0f172a;
+            padding: 18px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav .logo {
+            color: white;
+            font-size: 21px;
+            font-weight: bold;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 24px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .page-header {
+            text-align: center;
+            padding: 70px 20px 40px;
+        }
+
+        .page-header h1 {
+            font-size: 44px;
+            color: #0f172a;
+            margin-bottom: 15px;
+        }
+
+        .page-header p {
+            max-width: 750px;
+            margin: auto;
+            color: #475569;
+            font-size: 18px;
+        }
+
+        .projects-grid {
+            width: 90%;
+            max-width: 1150px;
+            margin: 30px auto 80px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 28px;
+        }
+
+        .project-card {
+            background-color: white;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
+        }
+
+        .project-card h2 {
+            color: #1d4ed8;
+            margin-bottom: 12px;
+        }
+
+        .project-card p {
+            margin-bottom: 16px;
+        }
+
+        .tools {
+            font-size: 14px;
+            font-weight: bold;
+            color: #475569;
+        }
+
+        .button {
+            display: inline-block;
+            margin-top: 15px;
+            background-color: #2563eb;
+            color: white;
+            text-decoration: none;
+            padding: 10px 18px;
+            border-radius: 6px;
+        }
+
+        .button:hover {
+            background-color: #1d4ed8;
+        }
+
+        footer {
+            background-color: #0f172a;
+            color: white;
+            text-align: center;
+            padding: 22px;
+        }
+
+        @media (max-width: 800px) {
+            nav {
+                flex-direction: column;
+                gap: 14px;
+            }
+
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 14px;
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <div class="logo">Ahmed Mohamed</div>
+
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="resume.html">Resume</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header class="page-header">
+        <h1>GIS Projects</h1>
+
+        <p>
+            A selection of projects focused on transportation, spatial analysis,
+            network analysis, environmental geography, and geographic storytelling.
+        </p>
+    </header>
+
+    <main class="projects-grid">
+
+        <section class="project-card">
+            <h2>B Line and Route 21 Transit Analysis</h2>
+
+            <p>
+                A comparative study examining travel time, rider experience,
+                station improvements, and service changes between the Route 21
+                bus and the B Line bus rapid transit service.
+            </p>
+
+            <p class="tools">
+                Tools: ArcGIS StoryMaps, ArcGIS Pro, transit data analysis
+            </p>
+
+            <a class="button" href="#">Project Coming Soon</a>
+        </section>
+
+        <section class="project-card">
+            <h2>Minneapolis Crime Analysis</h2>
+
+            <p>
+                A spatial analysis project examining crime patterns across
+                Minneapolis using mapping, geographic visualization, and
+                neighborhood-level analysis.
+            </p>
+
+            <p class="tools">
+                Tools: ArcGIS Pro, Python, spatial statistics
+            </p>
+
+            <a class="button" href="#">Project Coming Soon</a>
+        </section>
+
+        <section class="project-card">
+            <h2>Retail Network Analysis</h2>
+
+            <p>
+                A GIS network analysis project evaluating service areas,
+                travel distances, and customer catchment areas for retail
+                locations using transportation network data.
+            </p>
+
+            <p class="tools">
+                Tools: ArcGIS Pro, Network Analyst
+            </p>
+
+            <a class="button" href="#">Project Coming Soon</a>
+        </section>
+
+        <section class="project-card">
+            <h2>Urban Climatology Study</h2>
+
+            <p>
+                An environmental GIS project comparing temperature and air
+                quality conditions across urban locations and examining local
+                variations in the urban environment.
+            </p>
+
+            <p class="tools">
+                Tools: ArcGIS Pro, environmental sensors, data visualization
+            </p>
+
+            <a class="button" href="#">Project Coming Soon</a>
+        </section>
+
+        <section class="project-card">
+            <h2>Life Journey StoryMap</h2>
+
+            <p>
+                An interactive geographic story documenting my journey from
+                Port Elizabeth and Zinyaville in South Africa to Minneapolis
+                and the University of Minnesota.
+            </p>
+
+            <p class="tools">
+                Tools: ArcGIS StoryMaps, cartography, geographic storytelling
+            </p>
+
+            <a class="button" href="#">Project Coming Soon</a>
+        </section>
+
+        <section class="project-card">
+            <h2>Infrastructure GIS Experience</h2>
+
+            <p>
+                Professional experience supporting infrastructure mapping,
+                spatial data maintenance, document management, quality control,
+                and GIS workflows for Saint Paul Regional Water Services.
+            </p>
+
+            <p class="tools">
+                Tools: ArcGIS Pro, ArcGIS Online, enterprise GIS
+            </p>
+
+            <a class="button" href="about.html">Learn More</a>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>© 2026 Ahmed Mohamed | GIS Portfolio</p>
+    </footer>
+
+</body>
+</html>
+```
