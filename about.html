@@ -1,73 +1,151 @@
+```html
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Me | Ahmed Mohamed</title>
+
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            max-width: 900px;
+            margin: auto;
+            padding: 50px 25px;
+            text-align: center;
+            line-height: 1.8;
+            background-color: #f8fafc;
+            color: #1f2937;
+        }
+
+        h1 {
+            color: #1d4ed8;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            margin-top: 35px;
+            color: #0f172a;
+        }
+
+        h3 {
+            color: #475569;
+            font-weight: normal;
+            margin-bottom: 30px;
+        }
+
+        p {
+            margin-bottom: 20px;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        a {
+            color: #2563eb;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .profile-photo {
+            width: 220px;
+            border-radius: 50%;
+            margin-bottom: 25px;
+        }
+
+        .skills {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            margin-top: 20px;
+        }
+
+        .contact {
+            margin-top: 30px;
+        }
+
+        .home-link {
+            margin-top: 40px;
+            display: inline-block;
+        }
+    </style>
 </head>
 
 <body>
 
-<h1>About Me</h1>
-<img src="images/profile.jpg"
-     alt="Ahmed Mohamed"
-     width="220"
-     style="border-radius:50%; margin-bottom:20px;">
-    
-<h2>Ahmed Mohamed</h2>
-<h3>GIS Professional | Spatial Analyst | Geospatial Technology Enthusiast</h3>
+    <!-- Optional Profile Picture -->
+    <!-- Upload your photo to images/profile.jpg and remove the comment below -->
+    <!-- <img src="images/profile.jpg" alt="Ahmed Mohamed" class="profile-photo"> -->
 
-<p>
-I am a Geographic Information Science (GIS) professional and University of Minnesota graduate with experience in geospatial analysis, cartography, spatial data management, and infrastructure mapping. My academic and professional background has allowed me to develop strong technical skills using GIS to solve real-world problems related to transportation, infrastructure, and community planning.
-</p>
+    <h1>Ahmed Mohamed</h1>
 
-<p>
-Currently, I serve as a GIS Engineering Intern with Saint Paul Regional Water Services, where I assist with GIS mapping, geospatial data management, quality control, and infrastructure-related projects. Through this role, I have gained experience working with enterprise GIS systems, maintaining spatial datasets, and supporting engineering and operations teams through accurate geographic information.
-</p>
+    <h3>
+        GIS Professional | Spatial Analyst | Geospatial Technology Enthusiast
+    </h3>
 
-<p>
-My experience includes working with ArcGIS Pro, ArcGIS Online, spatial analysis techniques, cartographic design, GPS data collection, and web-based GIS applications. I also have programming experience with Python and exposure to geospatial data workflows that integrate analysis, visualization, and decision-making.
-</p>
+    <p>
+        I am a Geographic Information Science (GIS) professional and University of Minnesota graduate with experience in geospatial analysis, cartography, spatial data management, and infrastructure mapping. My academic and professional background has provided me with strong technical skills and a passion for using geographic data to solve real-world challenges.
+    </p>
 
-<p>
-My interests include transportation systems, infrastructure management, urban planning, web GIS development, and emerging geospatial technologies. I am particularly interested in how spatial data can improve decision-making, increase operational efficiency, and help organizations better understand the geographic patterns that influence their work.
-</p>
+    <p>
+        I currently serve as a GIS Engineering Intern with Saint Paul Regional Water Services, where I support GIS mapping, geospatial data management, quality control, and infrastructure-related projects. Through this experience, I have worked with enterprise GIS systems, maintained spatial datasets, and assisted engineering teams in managing critical infrastructure information.
+    </p>
 
-<h2>Technical Skills</h2>
+    <p>
+        My experience includes ArcGIS Pro, ArcGIS Online, spatial analysis, cartographic design, GPS data collection, web GIS applications, and Python programming. I enjoy transforming complex geographic data into meaningful maps, analyses, and visualizations that support decision-making.
+    </p>
 
-<ul>
-    <li>ArcGIS Pro</li>
-    <li>ArcGIS Online</li>
-    <li>StoryMaps</li>
-    <li>Network Analyst</li>
-    <li>Spatial Analysis</li>
-    <li>Cartographic Design</li>
-    <li>Python</li>
-    <li>GPS Data Collection</li>
-    <li>Data Management & Quality Control</li>
-    <li>Web GIS Applications</li>
-</ul>
+    <p>
+        My interests include transportation systems, infrastructure management, urban planning, web GIS development, and emerging geospatial technologies. I am especially interested in how spatial data can improve efficiency, support planning efforts, and help organizations make informed decisions.
+    </p>
 
-<h2>Connect With Me</h2>
+    <h2>Technical Skills</h2>
 
-<p>
-LinkedIn:
-<a href="https://www.linkedin.com/in/ahmed612m" target="_blank">
-linkedin.com/in/ahmed612m
-</a>
-</p>
+    <div class="skills">
+        <ul>
+            <li>ArcGIS Pro</li>
+            <li>ArcGIS Online</li>
+            <li>StoryMaps</li>
+            <li>Network Analyst</li>
+            <li>Spatial Analysis</li>
+            <li>Cartographic Design</li>
+            <li>Python</li>
+            <li>GPS Data Collection</li>
+            <li>Data Management & Quality Control</li>
+            <li>Web GIS Applications</li>
+        </ul>
+    </div>
 
-<p>
-GitHub:
-<a href="https://github.com/Ahmedgis612" target="_blank">
-github.com/Ahmedgis612
-</a>
-</p>
+    <h2>Connect With Me</h2>
 
-<p>
-<a href="index.html">← Return to Home</a>
-</p>
+    <div class="contact">
+        <p>
+            LinkedIn:
+            <a href="https://www.linkedin.com/in/ahmed612m" target="_blank">
+                linkedin.com/in/ahmed612m
+            </a>
+        </p>
+
+        <p>
+            GitHub:
+            <a href="https://github.com/Ahmedgis612" target="_blank">
+                github.com/Ahmedgis612
+            </a>
+        </p>
+    </div>
+
+    <a href="index.html" class="home-link">← Return to Home</a>
 
 </body>
 </html>
