@@ -1,32 +1,228 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Ahmed Mohamed | GIS Portfolio</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.6;
+            color: #1f2937;
+            background-color: #f8fafc;
+        }
+
+        nav {
+            background-color: #0f172a;
+            padding: 18px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav .logo {
+            color: white;
+            font-size: 21px;
+            font-weight: bold;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 24px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 15px;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .hero {
+            min-height: 80vh;
+            background: linear-gradient(
+                rgba(15, 23, 42, 0.88),
+                rgba(15, 23, 42, 0.88)
+            );
+            color: white;
+            display: flex;
+            align-items: center;
+            padding: 80px 10%;
+        }
+
+        .hero-content {
+            max-width: 750px;
+        }
+
+        .hero h1 {
+            font-size: 58px;
+            line-height: 1.1;
+            margin-bottom: 15px;
+        }
+
+        .hero h2 {
+            font-size: 25px;
+            font-weight: normal;
+            color: #93c5fd;
+            margin-bottom: 22px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            max-width: 680px;
+            margin-bottom: 32px;
+        }
+
+        .button {
+            display: inline-block;
+            background-color: #2563eb;
+            color: white;
+            text-decoration: none;
+            padding: 13px 24px;
+            border-radius: 6px;
+            margin-right: 12px;
+            font-weight: bold;
+        }
+
+        .button.secondary {
+            background-color: transparent;
+            border: 2px solid white;
+        }
+
+        .highlights {
+            padding: 70px 10%;
+            text-align: center;
+        }
+
+        .highlights h2 {
+            font-size: 34px;
+            margin-bottom: 35px;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        .card {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
+        }
+
+        .card h3 {
+            color: #1d4ed8;
+            margin-bottom: 12px;
+        }
+
+        footer {
+            background-color: #0f172a;
+            color: white;
+            text-align: center;
+            padding: 22px;
+        }
+
+        @media (max-width: 750px) {
+            nav {
+                flex-direction: column;
+                gap: 14px;
+            }
+
+            nav ul {
+                gap: 13px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .hero h1 {
+                font-size: 42px;
+            }
+
+            .cards {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
+
 <body>
-    <h1>Ahmed Mohamed</h1>
-    <h2>GIS Professional</h2>
 
-    <p>
-        Welcome to my GIS portfolio. I am a GIS student and GIS Engineering Intern
-        with experience in ArcGIS Pro, ArcGIS Online, spatial analysis,
-        transportation planning, and infrastructure mapping.
-    </p>
+    <nav>
+        <div class="logo">Ahmed Mohamed</div>
 
-    <h3>Projects</h3>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="resume.html">Resume</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
 
-    <ul>
-        <li>Minneapolis Crime Analysis</li>
-        <li>B Line vs Route 21 Transit Study</li>
-        <li>Network Analysis Projects</li>
-        <li>Urban Climatology Mapping</li>
-    </ul>
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Ahmed Mohamed</h1>
 
-    <h3>Contact</h3>
+            <h2>GIS Professional | Spatial Analyst | Mapmaker</h2>
 
-    <p>
-        LinkedIn | GitHub | Email
-    </p>
+            <p>
+                I am a Geographic Information Science student and GIS Engineering
+                Intern with experience in spatial analysis, infrastructure mapping,
+                transportation research, geospatial data management, and web GIS.
+            </p>
+
+            <a class="button" href="projects.html">View My Projects</a>
+            <a class="button secondary" href="about.html">About Me</a>
+        </div>
+    </section>
+
+    <section class="highlights">
+        <h2>What I Work On</h2>
+
+        <div class="cards">
+            <div class="card">
+                <h3>GIS Mapping</h3>
+                <p>
+                    Creating accurate and professional maps using ArcGIS Pro,
+                    ArcGIS Online, and cartographic design principles.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Spatial Analysis</h3>
+                <p>
+                    Examining geographic patterns, transportation networks,
+                    demographics, infrastructure, and environmental data.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Web GIS</h3>
+                <p>
+                    Building interactive maps, StoryMaps, dashboards, and online
+                    geographic applications that communicate spatial information.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 Ahmed Mohamed | GIS Portfolio</p>
+    </footer>
 
 </body>
 </html>
