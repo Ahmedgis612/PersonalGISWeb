@@ -1,171 +1,445 @@
-```
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>About Me | Ahmed Mohamed</title>
 
     <style>
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            max-width: 900px;
-            margin: auto;
-            padding: 50px 25px;
-            text-align: center;
-            line-height: 1.8;
-            background-color: #f8fafc;
-            color: #1f2937;
-        }
-        <section>
-    <h2>My Geographic Journey</h2>
-
-    <p>
-        Explore the interactive StoryMap below to learn more about my journey
-        from South Africa to Minneapolis and my path into Geographic
-        Information Science.
-    </p>
-
-    <div class="map-container">
-        <iframe
-            src="https://storymaps.arcgis.com/stories/2e2f4ece6c71430e98db33005367da8f"
-            title="Ahmed Mohamed Geographic Journey StoryMap"
-            allowfullscreen
-            loading="lazy">
-        </iframe>
-    </div>
-</section>
-
-        h1 {
-            color: #1d4ed8;
-            margin-bottom: 10px;
-        }
-
-        h2 {
-            margin-top: 35px;
-            color: #0f172a;
-        }
-
-        h3 {
-            color: #475569;
-            font-weight: normal;
-            margin-bottom: 30px;
-        }
-
-        p {
-            margin-bottom: 20px;
-        }
-
-        ul {
-            list-style: none;
+        * {
+            box-sizing: border-box;
+            margin: 0;
             padding: 0;
         }
 
-        li {
-            margin-bottom: 10px;
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f8fafc;
+            color: #1f2937;
+            line-height: 1.7;
         }
 
-        a {
-            color: #2563eb;
-            text-decoration: none;
+        nav {
+            background-color: #0f172a;
+            padding: 18px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav .logo {
+            color: white;
+            font-size: 21px;
             font-weight: bold;
         }
 
-        a:hover {
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 24px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 15px;
+        }
+
+        nav a:hover {
             text-decoration: underline;
         }
 
-        .profile-photo {
-            width: 220px;
-            border-radius: 50%;
-            margin-bottom: 25px;
+        .about-header {
+            background-color: #e2e8f0;
+            text-align: center;
+            padding: 70px 20px 55px;
         }
 
-        .skills {
-            background: white;
-            padding: 25px;
-            border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-            margin-top: 20px;
+        .about-header h1 {
+            font-size: 48px;
+            color: #0f172a;
+            margin-bottom: 12px;
         }
 
-        .contact {
+        .about-header h2 {
+            font-size: 23px;
+            font-weight: normal;
+            color: #2563eb;
+            margin-bottom: 18px;
+        }
+
+        .about-header p {
+            max-width: 780px;
+            margin: auto;
+            font-size: 18px;
+            color: #475569;
+        }
+
+        main {
+            width: 90%;
+            max-width: 1050px;
+            margin: auto;
+            padding: 60px 0 80px;
+            text-align: center;
+        }
+
+        section {
+            margin-bottom: 65px;
+        }
+
+        section h2 {
+            font-size: 32px;
+            color: #0f172a;
+            margin-bottom: 22px;
+        }
+
+        section p {
+            max-width: 850px;
+            margin: 0 auto 20px;
+            font-size: 17px;
+        }
+
+        .storymap-container {
+            width: 100%;
+            height: 720px;
+            margin: 35px auto 0;
+            border-radius: 12px;
+            overflow: hidden;
+            background-color: white;
+            box-shadow: 0 5px 22px rgba(0, 0, 0, 0.12);
+        }
+
+        .storymap-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
             margin-top: 30px;
         }
 
-        .home-link {
-            margin-top: 40px;
+        .skill-card {
+            background-color: white;
+            padding: 24px 18px;
+            border-radius: 10px;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+            font-weight: bold;
+            color: #1d4ed8;
+        }
+
+        .experience-card {
+            background-color: white;
+            max-width: 900px;
+            margin: 25px auto 0;
+            padding: 32px;
+            border-radius: 12px;
+            box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
+        }
+
+        .experience-card h3 {
+            color: #1d4ed8;
+            font-size: 23px;
+            margin-bottom: 10px;
+        }
+
+        .experience-card h4 {
+            color: #475569;
+            font-size: 17px;
+            margin-bottom: 18px;
+            font-weight: normal;
+        }
+
+        .connect-links {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 16px;
+            margin-top: 28px;
+        }
+
+        .button {
             display: inline-block;
+            background-color: #2563eb;
+            color: white;
+            text-decoration: none;
+            padding: 13px 22px;
+            border-radius: 7px;
+            font-weight: bold;
+        }
+
+        .button:hover {
+            background-color: #1d4ed8;
+        }
+
+        .button.secondary {
+            background-color: #0f172a;
+        }
+
+        footer {
+            background-color: #0f172a;
+            color: white;
+            text-align: center;
+            padding: 22px;
+        }
+
+        @media (max-width: 850px) {
+            nav {
+                flex-direction: column;
+                gap: 14px;
+            }
+
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 14px;
+            }
+
+            .about-header h1 {
+                font-size: 38px;
+            }
+
+            .skills-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .storymap-container {
+                height: 580px;
+            }
+        }
+
+        @media (max-width: 550px) {
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .storymap-container {
+                height: 500px;
+            }
         }
     </style>
 </head>
 
 <body>
 
-    <!-- Optional Profile Picture -->
-    <!-- Upload your photo to images/profile.jpg and remove the comment below -->
-    <!-- <img src="images/profile.jpg" alt="Ahmed Mohamed" class="profile-photo"> -->
+    <nav>
+        <div class="logo">Ahmed Mohamed</div>
 
-    <h1>Ahmed Mohamed</h1>
-
-    <h3>
-        GIS Professional | Spatial Analyst | Geospatial Technology Enthusiast
-    </h3>
-
-    <p>
-        I am a Geographic Information Science (GIS) professional and University of Minnesota graduate with experience in geospatial analysis, cartography, spatial data management, and infrastructure mapping. My academic and professional background has provided me with strong technical skills and a passion for using geographic data to solve real-world challenges.
-    </p>
-
-    <p>
-        I currently serve as a GIS Engineering Intern with Saint Paul Regional Water Services, where I support GIS mapping, geospatial data management, quality control, and infrastructure-related projects. Through this experience, I have worked with enterprise GIS systems, maintained spatial datasets, and assisted engineering teams in managing critical infrastructure information.
-    </p>
-
-    <p>
-        My experience includes ArcGIS Pro, ArcGIS Online, spatial analysis, cartographic design, GPS data collection, web GIS applications, and Python programming. I enjoy transforming complex geographic data into meaningful maps, analyses, and visualizations that support decision-making.
-    </p>
-
-    <p>
-        My interests include transportation systems, infrastructure management, urban planning, web GIS development, and emerging geospatial technologies. I am especially interested in how spatial data can improve efficiency, support planning efforts, and help organizations make informed decisions.
-    </p>
-
-    <h2>Technical Skills</h2>
-
-    <div class="skills">
         <ul>
-            <li>ArcGIS Pro</li>
-            <li>ArcGIS Online</li>
-            <li>StoryMaps</li>
-            <li>Network Analyst</li>
-            <li>Spatial Analysis</li>
-            <li>Cartographic Design</li>
-            <li>Python</li>
-            <li>GPS Data Collection</li>
-            <li>Data Management & Quality Control</li>
-            <li>Web GIS Applications</li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="resume.html">Resume</a></li>
+            <li><a href="contact.html">Contact</a></li>
         </ul>
-    </div>
+    </nav>
 
-    <h2>Connect With Me</h2>
+    <header class="about-header">
+        <h1>About Me</h1>
 
-    <div class="contact">
-        <p>
-            LinkedIn:
-            <a href="https://www.linkedin.com/in/ahmed612m" target="_blank">
-                linkedin.com/in/ahmed612m
-            </a>
-        </p>
+        <h2>
+            GIS Graduate | Spatial Analyst | Geospatial Professional
+        </h2>
 
         <p>
-            GitHub:
-            <a href="https://github.com/Ahmedgis612" target="_blank">
-                github.com/Ahmedgis612
-            </a>
+            I am a Geographic Information Science graduate from the University
+            of Minnesota with experience in infrastructure mapping, spatial
+            analysis, transportation research, data management, and web GIS.
         </p>
-    </div>
+    </header>
 
-    <a href="index.html" class="home-link">← Return to Home</a>
+    <main>
+
+        <section>
+            <h2>My Background</h2>
+
+            <p>
+                My name is Ahmed Mohamed. I was born in Port Elizabeth, now known
+                as Gqeberha, in the Eastern Cape of South Africa. I later lived
+                in Zinyaville near Rustenburg, where I spent much of my childhood
+                before moving to Minneapolis in 2014.
+            </p>
+
+            <p>
+                Living in both South Africa and Minnesota shaped my interest in
+                communities, transportation, cities, infrastructure, and the ways
+                people interact with the places around them.
+            </p>
+
+            <p>
+                After moving to Minneapolis, I attended Roosevelt High School and
+                regularly relied on Metro Transit buses and the Blue Line. Those
+                experiences helped develop my interest in transportation systems,
+                accessibility, urban planning, and geographic connections.
+            </p>
+        </section>
+
+        <section>
+            <h2>Education</h2>
+
+            <p>
+                I earned my Bachelor of Science in Geographic Information Science
+                from the University of Minnesota in May 2026.
+            </p>
+
+            <p>
+                During my studies, I developed experience in cartography, spatial
+                analysis, geocomputing, remote sensing, network analysis,
+                transportation geography, environmental analysis, urban climatology,
+                and web-based mapping.
+            </p>
+
+            <p>
+                My academic work included projects involving transit performance,
+                crime mapping, retail service areas, public health, environmental
+                conditions, infrastructure, and geographic storytelling.
+            </p>
+        </section>
+
+        <section>
+            <h2>Professional GIS Experience</h2>
+
+            <div class="experience-card">
+                <h3>GIS Engineering Intern</h3>
+
+                <h4>
+                    Saint Paul Regional Water Services — Engineering Division,
+                    Maps and Records
+                </h4>
+
+                <p>
+                    In this role, I support infrastructure-related GIS work using
+                    ArcGIS Pro and ArcGIS Online. My responsibilities include
+                    updating spatial data, uploading completed fieldwork documents,
+                    reviewing geographic information, performing data quality
+                    control, and helping maintain accurate infrastructure records.
+                </p>
+
+                <p>
+                    This experience has strengthened my understanding of enterprise
+                    GIS, utilities, asset management, engineering workflows, and
+                    the importance of reliable geographic data in public service.
+                </p>
+            </div>
+        </section>
+
+        <section>
+            <h2>My Geographic Journey</h2>
+
+            <p>
+                The interactive StoryMap below highlights my journey from South
+                Africa to Minnesota, my education, and the experiences that led
+                me toward a career in Geographic Information Science.
+            </p>
+
+            <div class="storymap-container">
+                <iframe
+                    src="https://storymaps.arcgis.com/stories/2e2f4ece6c71430e98db33005367da8f"
+                    title="Ahmed Mohamed Geographic Journey StoryMap"
+                    loading="lazy"
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </section>
+
+        <section>
+            <h2>Technical Skills</h2>
+
+            <div class="skills-grid">
+                <div class="skill-card">ArcGIS Pro</div>
+                <div class="skill-card">ArcGIS Online</div>
+                <div class="skill-card">ArcGIS StoryMaps</div>
+                <div class="skill-card">Network Analyst</div>
+                <div class="skill-card">Spatial Analysis</div>
+                <div class="skill-card">Cartographic Design</div>
+                <div class="skill-card">Python</div>
+                <div class="skill-card">GeoPandas</div>
+                <div class="skill-card">Folium</div>
+                <div class="skill-card">GPS Data Collection</div>
+                <div class="skill-card">GIS Data Management</div>
+                <div class="skill-card">Quality Control</div>
+                <div class="skill-card">Infrastructure Mapping</div>
+                <div class="skill-card">Transportation Analysis</div>
+                <div class="skill-card">Web GIS</div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Professional Interests</h2>
+
+            <p>
+                My professional interests include transportation systems,
+                infrastructure management, utilities, urban planning, spatial
+                analytics, web GIS, and geospatial technology.
+            </p>
+
+            <p>
+                I am particularly interested in using geographic data to improve
+                decision-making, support public infrastructure, increase operational
+                efficiency, and communicate complex information through maps and
+                interactive applications.
+            </p>
+        </section>
+
+        <section>
+            <h2>Looking Ahead</h2>
+
+            <p>
+                I plan to continue building my experience in enterprise GIS,
+                spatial databases, Python, automation, web mapping, and location
+                intelligence.
+            </p>
+
+            <p>
+                My long-term goal is to develop a career in GIS while eventually
+                building a geospatial consulting company that helps cities,
+                utilities, engineering firms, and other organizations improve
+                their operations through mapping and spatial data.
+            </p>
+        </section>
+
+        <section>
+            <h2>Connect With Me</h2>
+
+            <p>
+                Visit my LinkedIn profile, explore my GitHub work, or view the
+                projects featured throughout my portfolio.
+            </p>
+
+            <div class="connect-links">
+                <a
+                    class="button"
+                    href="https://www.linkedin.com/in/ahmed612m"
+                    target="_blank"
+                    rel="noopener noreferrer">
+                    LinkedIn
+                </a>
+
+                <a
+                    class="button secondary"
+                    href="https://github.com/Ahmedgis612"
+                    target="_blank"
+                    rel="noopener noreferrer">
+                    GitHub
+                </a>
+
+                <a class="button" href="projects.html">
+                    View My Projects
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>© 2026 Ahmed Mohamed | GIS Portfolio</p>
+    </footer>
 
 </body>
 </html>
-```
+
 
